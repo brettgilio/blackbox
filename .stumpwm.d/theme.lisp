@@ -25,6 +25,7 @@
 (set-transient-gravity :top)
 
 (run-shell-command "xsetroot -display :0 -solid '#282c34'")
+(run-shell-command "xrandr --output eDP-1 --right-of HDMI-1 --auto")
 
 (xft:cache-fonts)
 (set-font (make-instance 'xft:font

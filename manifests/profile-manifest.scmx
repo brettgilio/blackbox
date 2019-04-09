@@ -10,5 +10,8 @@
    "offlineimap"
    "openssh"
    "password-store"
+   "pinentry"
+   "python"
+   "python:tk"
    "sbcl-next"
    "sbcl-next:lib"))

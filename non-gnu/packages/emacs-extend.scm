@@ -135,4 +135,87 @@ as better scaling of and anti aliasing of the icons.")
      (license
       (list license:expat license:gpl3+ license:silofl1.1 license:asl2.0)))))
 
-      
+(define-public emacs-doom-modeline
+  (let ((commit "a6814ac4e3c9edc95e008687e9d1e0fe49b9bf07")
+        (revision "0"))
+    (package
+     (name "emacs-doom-modeline")
+     (version (git-version "1.9.7" revision commit))
+     (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/seagle0128/doom-modeline.git")
+                    (commit commit)))
+              (sha256
+               (base32
+                "16bx8g6hf2d0g3sxzrknjf0fnraj2w9a2ndl0fs69p07q0ahvx6i"))
+              (file-name (git-file-name name version))))
+     (build-system emacs-build-system)
+     (propagated-inputs
+      `(("emacs-all-the-icons" ,emacs-all-the-icons-channel)
+	("emacs-shrink-path" ,emacs-shrink-path)
+	("emacs-eldoc-eval" ,emacs-eldoc-eval)
+	("emacs-dash" ,emacs-dash)))
+     (home-page
+      "https://github.com/seagle0128/doom-modeline")
+     (synopsis "A minimal and modern mode-line")
+     (description
+      "")
+     (license license:gpl3+))))
+    
+(define-public emacs-shrink-path
+  (let ((commit "9b8cfb59a2dcee8b39b680ab9adad5ecb1f53c0b")
+        (revision "0"))
+    (package
+     (name "emacs-shrink-path")
+     (version (git-version "0.3.1" revision commit))
+     (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://gitlab.com/bennya/shrink-path.el.git")
+                    (commit commit)))
+              (sha256
+               (base32
+                "0kx0c4syd7k6ff9j463bib32pz4wq0rzjlg6b0yqnymlzfr1mbki"))
+              (file-name (git-file-name name version))))
+       (build-system emacs-build-system)
+       (propagated-inputs
+	`(("emacs-s" ,emacs-s)
+	  ("emacs-dash" ,emacs-dash)
+	  ("emacs-f" ,emacs-f)))
+       (home-page
+	"https://gitlab.com/bennya/shrink-path.el")
+       (synopsis "fish-style path")
+       (description
+	"Provides functions that offer fish shell[1] path truncation.
+Directory /usr/share/emacs/site-lisp => /u/s/e/site-lisp
+
+Also includes utility functions that make integration in eshell or the
+modeline easier.
+
+[1] https://fishshell.com/
+")
+       (license license:gpl3+))))
+
+(define-public emacs-eldoc-eval
+  (let ((commit "deca5e39f31282a06531002d289258cd099433c0")
+        (revision "0"))
+    (package
+     (name "emacs-eldoc-eval")
+     (version (git-version "1.1" revision commit))
+     (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/thierryvolpiatto/eldoc-eval.git")
+                    (commit commit)))
+              (sha256
+               (base32
+                "1fh9dx669czkwy4msylcg64azz3az27akx55ipnazb5ghmsi7ivk"))
+              (file-name (git-file-name name version))))
+     (build-system emacs-build-system)
+     (home-page "https://github.com/thierryvolpiatto/eldoc-eval")
+     (synopsis
+      "Enable eldoc support when minibuffer is in use.")
+     (description
+      "This package enables eldoc support when minibuffer is in use.")
+     (license license:gpl3+))))

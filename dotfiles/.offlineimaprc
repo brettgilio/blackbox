@@ -1,0 +1,27 @@
+[general]
+accounts = Posteo
+maxsyncaccounts = 1
+pythonfile = /home/brettg/Repos/guix-system/bin/offlineimap.py
+
+[Account Posteo]
+localrepository = LocalPosteo
+remoterepository = RemotePosteo
+posysynchook = mu index --maildir ~/Maildir
+autorefresh = 5
+quick = 10
+
+[Repository LocalPosteo]
+type = Maildir
+localfolders = ~/Maildir/Posteo
+
+[Repository RemotePosteo]
+type = IMAP
+ssl = yes
+remotehost = posteo.de
+remoteuser = brettg@posteo.net
+remotepasseval = get_pass("brettg@posteo.net")
+maxconnections = 2
+keepalive = 60
+holdconnectionopen = yes
+
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt

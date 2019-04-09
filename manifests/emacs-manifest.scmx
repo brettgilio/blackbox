@@ -1,0 +1,6 @@
+(specifications->manifest
+ '("emacs"
+   "emacs-guix"
+   "emacs-magit"
+   "emacs-magit-popup"
+   "emacs-use-package"))

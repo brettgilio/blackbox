@@ -22,6 +22,7 @@ source /etc/bashrc
 # Aliases
 alias emacs-env='guix environment -m $HOME/Repos/guix-system/manifests/emacs-manifest.scmx'
 alias profile-install='guix package -m $HOME/Repos/guix-system/manifests/profile-manifest.scmx'
+alias emacs='emacs --no-x-resources'
 
 # Adjust the prompt depending on whether we're in 'guix environment'.
 if [ -n "$GUIX_ENVIRONMENT" ]

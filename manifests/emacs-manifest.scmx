@@ -3,6 +3,7 @@
    "emacs-company"
    "emacs-company-quickhelp"
    "emacs-guix"
+   "emacs-helm"
    "emacs-magit"
    "emacs-magit-popup"
    "emacs-use-package"))

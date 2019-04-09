@@ -6,6 +6,9 @@
    "git"	
    "git:send-email"
    "gnupg"
+   "mu"
+   "offlineimap"
    "openssh"
+   "password-store"
    "sbcl-next"
    "sbcl-next:lib"))

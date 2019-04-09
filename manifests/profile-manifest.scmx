@@ -1,5 +1,8 @@
 (specifications->manifest
  '("font-adobe-source-code-pro"
+   "font-fira-code"
+   "font-fira-mono"
+   "font-fira-sans"
    "git"	
    "git:send-email"
    "gnupg"

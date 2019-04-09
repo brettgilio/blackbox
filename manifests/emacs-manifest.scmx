@@ -1,5 +1,7 @@
 (specifications->manifest
  '("emacs"
+   "emacs-company"
+   "emacs-company-quickhelp"
    "emacs-guix"
    "emacs-magit"
    "emacs-magit-popup"

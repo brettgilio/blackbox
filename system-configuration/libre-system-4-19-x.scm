@@ -39,6 +39,8 @@
 		  stumpwm
 		  xterm
 		  xrdb
+		  xsetroot
+		  xrandr
                   %base-packages))
  
  (services (cons* %desktop-services))

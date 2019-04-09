@@ -1,0 +1,8 @@
+(specifications->manifest
+ '("font-adobe-source-code-pro"
+   "git"	
+   "git:send-email"
+   "gnupg"
+   "openssh"
+   "sbcl-next"
+   "sbcl-next:lib"))

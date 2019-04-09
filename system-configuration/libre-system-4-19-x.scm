@@ -38,6 +38,7 @@
                   gvfs              ;for user mounts
 		  stumpwm
 		  xterm
+		  xrdb
                   %base-packages))
  
  (services (cons* %desktop-services))

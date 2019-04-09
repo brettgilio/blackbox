@@ -1,0 +1,11 @@
+auto-save-list/
+backups/
+custom.el
+elpa/
+.lsp-session-*
+network-security.data
+snippets/
+url/
+games/
+emms/
+tramp

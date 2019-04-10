@@ -3,6 +3,7 @@
    "emacs-all-the-icons@3.2.0-1.f996faf"
    "emacs-company"
    "emacs-company-quickhelp"
+   "emacs-doom-modeline"
    "emacs-guix"
    "emacs-helm"
    "emacs-magit"

@@ -1,5 +1,7 @@
 (specifications->manifest
- '("font-adobe-source-code-pro"
+ '("curl"
+   "curl:doc"
+   "font-adobe-source-code-pro"
    "font-fira-code"
    "font-fira-mono"
    "font-fira-sans"

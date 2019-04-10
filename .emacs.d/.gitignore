@@ -10,3 +10,4 @@ games/
 emms/
 tramp
 transient/
+*.el~

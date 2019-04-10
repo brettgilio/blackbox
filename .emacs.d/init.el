@@ -21,3 +21,13 @@
       (write-file fn)))
   (setq custom-file fn)
   (load custom-file))
+
+;; Load use-package for loading.
+(eval-when-compile
+  (require 'use-package))
+
+;; Regularly loaded modules.
+(require 'module-appearance)
+
+;; Lazily loaded modules.
+

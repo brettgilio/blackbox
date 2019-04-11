@@ -253,3 +253,54 @@ including screenshots and documentation.  After installing, you may want to
 use M-x company-coq-tutorial to open the tutorial.
 ")
      (license license:gpl3+))))
+
+(define-public emacs-company-math
+  (let ((commit "7e7f8c71f57b12f9bcbbf01f2bbcc59343ad76d4")
+        (revision "0"))
+    (package
+     (name "emacs-company-math")
+     (version (git-version "1.3" revision commit))
+     (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/vspinu/company-math.git")
+                    (commit commit)))
+              (sha256
+               (base32
+                "0n385agbr0dlnlyqi79r8wm3n8gzanrd56nbirhqyjlgnxz25xak"))
+              (file-name (git-file-name name version))))
+     (build-system emacs-build-system)
+     (propagated-inputs
+      `(("emacs-company" ,emacs-company)
+	("emacs-math-symbol-lists"
+	 ,emacs-math-symbol-lists)))
+     (home-page
+      "https://github.com/vspinu/company-math")
+     (synopsis
+      "Completion backends for unicode math symbols and latex tags")
+     (description "No description available.")
+     (license license:gpl3+))))
+
+(define-public emacs-math-symbol-lists
+  (let ((commit "e15ec26a010b4f38111bc150c51ecb1a319f6bdb")
+        (revision "0"))
+    (package
+     (name "emacs-math-symbol-lists")
+     (version (git-version "1.2.1" revision commit))
+     (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/vspinu/math-symbol-lists.git")
+                    (commit commit)))
+              (sha256
+               (base32
+                "1x45q1j8zvvh31vq3fxkvhaj45ijds0jdfw1aajgb73gpr5aqvyh"))
+              (file-name (git-file-name name version))))
+     (build-system emacs-build-system)
+     (home-page
+      "https://github.com/vspinu/math-symbol-lists")
+     (synopsis
+      "Lists of Unicode math symbols and latex commands")
+     (description
+      "")
+     (license license:gpl3+))))

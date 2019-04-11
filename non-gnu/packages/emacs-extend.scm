@@ -233,7 +233,7 @@ modeline easier.
                     (commit commit)))
               (sha256
                (base32
-                "0smlnprfxbxwjzs63cnnfn39vpbimrfc7ljdw5ffyifarxhmn1h3"))
+                "0qa96iq99cwlmylzbrknkg3fkhc1x4ngwlpz9rppgzlghpfb3xs7"))
               (file-name (git-file-name name version))))
      (build-system emacs-build-system)
      (propagated-inputs

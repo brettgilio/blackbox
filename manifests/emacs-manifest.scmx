@@ -11,5 +11,6 @@
    "emacs-lsp-ui"
    "emacs-magit"
    "emacs-magit-popup"
+   "emacs-pdf-tools"
    "emacs-rust-mode"
    "emacs-use-package"))

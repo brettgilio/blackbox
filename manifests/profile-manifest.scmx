@@ -1,5 +1,7 @@
 (specifications->manifest
- '("curl"
+ '("alsa-lib"
+   "alsa-utils"
+   "curl"
    "curl:doc"
    "font-adobe-source-code-pro"
    "font-fira-code"

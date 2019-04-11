@@ -294,7 +294,7 @@ use M-x company-coq-tutorial to open the tutorial.
                     (commit commit)))
               (sha256
                (base32
-                "1x45q1j8zvvh31vq3fxkvhaj45ijds0jdfw1aajgb73gpr5aqvyh"))
+                "11jk0xdlc8zk2way1d85n2khmydzzvpjhh8bbjbdsv8d1z3j9yfh"))
               (file-name (git-file-name name version))))
      (build-system emacs-build-system)
      (home-page

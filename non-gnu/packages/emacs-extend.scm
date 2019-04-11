@@ -219,3 +219,37 @@ modeline easier.
      (description
       "This package enables eldoc support when minibuffer is in use.")
      (license license:gpl3+))))
+
+(define-public emacs-company-coq
+  (let ((commit "93168e134099541a923e70f9d633c78de1aa0c6f")
+        (revision "0"))
+    (package
+     (name "emacs-company-coq")
+     (version (git-version "1.0" revision commit))
+     (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/cpitclaudel/company-coq.git")
+                    (commit commit)))
+              (sha256
+               (base32
+                "0smlnprfxbxwjzs63cnnfn39vpbimrfc7ljdw5ffyifarxhmn1h3"))
+              (file-name (git-file-name name version))))
+     (build-system emacs-build-system)
+     (propagated-inputs
+      `(("emacs-company-math" ,emacs-company-math)
+	("emacs-company" ,emacs-company)
+	("emacs-yasnippet" ,emacs-yasnippet)
+	("emacs-dash" ,emacs-dash)))
+     (home-page "https://github.com/cpitclaudel/company-coq.git")
+     (synopsis
+      "A collection of extensions for Proof General's Coq mode")
+     (description
+      "This package includes a collection of company-mode backends for
+Proof-General's Coq mode, and many useful extensions to Proof-General.
+
+See https://github.com/cpitclaudel/company-coq/ for a detailed description,
+including screenshots and documentation.  After installing, you may want to
+use M-x company-coq-tutorial to open the tutorial.
+")
+     (license license:gpl3+))))

@@ -318,7 +318,7 @@ use M-x company-coq-tutorial to open the tutorial.
                     (commit commit)))
               (sha256
                (base32
-                "0b84v6whympqrji6lq0sh11byklh80bs3z8rm2d42lgksykvqa61"))
+                "042pzcdhxi2z07jcscgjbaki9nrrm0cbgbbrnymd1r4q8ckkn8l9"))
               (file-name (git-file-name name version))))
      (build-system emacs-build-system)
      (propagated-inputs

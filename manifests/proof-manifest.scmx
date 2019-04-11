@@ -1,0 +1,4 @@
+(specifications->manifest
+ '("coq"
+   "proof-general"
+   "z3"))

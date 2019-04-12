@@ -1,7 +1,11 @@
 (defun module-pg//load-pg ()
-(load (concat
-       (getenv "GUIX_ENVIRONMENT")
-       "/share/emacs/site-lisp"
-       "/ProofGeneral/generic/proof-site.el")))
+  
+  (use-package proof-site
+    :load-path (lambda ()
+		 (expand-file-name
+		  "share/emacs/site-lisp/ProofGeneral/generic"
+		  (or (getenv "GUIX_ENVIRONMENT")
+		      (error "GUIX_ENVIRONMENT is not defined."))))))
+  
 
 (provide 'module-pg)

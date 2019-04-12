@@ -31,4 +31,5 @@
 
 ;; Lazily loaded modules.
 (use-package module-pg
-  :hook (after-init . module-pg//load-pg))
+  :hook (after-init . module-pg//load-pg)
+  :disabled)

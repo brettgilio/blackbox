@@ -33,3 +33,6 @@
 (use-package module-pg
   :hook (after-init . module-pg//load-pg)
   :disabled)
+
+(use-package module-python
+  :hook (after-init . module-python//load-lsp))

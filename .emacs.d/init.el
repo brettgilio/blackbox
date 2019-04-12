@@ -31,8 +31,7 @@
 
 ;; Lazily loaded modules.
 (use-package module-pg
-  :hook (after-init . module-pg//load-pg)
-  :disabled)
+  :hook (after-init . module-pg//load-pg))
 
 (use-package module-python
   :hook (after-init . module-python//load-lsp))

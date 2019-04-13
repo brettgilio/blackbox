@@ -1,0 +1,5 @@
+;; To be used in combination with a Nix file associated with Rust
+
+(specifications->manifest
+ '("emacs-fstar-mode@0.9.4.0-0.3a9be64"
+   "z3"))

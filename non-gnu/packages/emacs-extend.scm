@@ -330,3 +330,37 @@ use M-x company-coq-tutorial to open the tutorial.
      (description
       "")
      (license #f))))
+
+(define-public emacs-fstar-mode
+  (let ((commit "3a9be64827bbed8e34d38803b5c44d8d4f6cd688")
+        (revision "0"))
+    (package
+     (name "emacs-fstar-mode")
+     (version (git-version "0.9.4.0" revision commit))
+     (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/FStarLang/fstar-mode.el.git")
+                    (commit commit)))
+              (sha256
+               (base32
+                "0manmkd66355g1fw2q1q96ispd0vxf842i8dcr6g592abrz5lhi7"))
+              (file-name (git-file-name name version))))
+     (build-system emacs-build-system)
+     (propagated-inputs
+      `(("emacs-dash" ,emacs-dash)))
+     (home-page
+      "https://github.com/FStarLang/fstar.el")
+     (synopsis "Support for F* programming")
+     (description
+      "This file implements support for F* programming in Emacs, including:
+
+* Syntax highlighting
+* Unicode math (with prettify-symbols-mode)
+* Indentation
+* Real-time verification (requires the Flycheck package)
+* Interactive proofs (à la Proof-General)
+
+See https://github.com/FStarLang/fstar-mode.el for setup and usage tips.
+")
+     (license license:expat))))

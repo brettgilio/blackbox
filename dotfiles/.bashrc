@@ -25,6 +25,9 @@ alias profile-install='guix package -m $HOME/Repos/guix-system/manifests/profile
 alias emacs='emacs --no-x-resources'
 alias emacs-pg='proofgeneral --no-x-resources'
 
+# Exports
+export GUILE_LOAD_PATH=/home/brettg/Repos/guix-system:$GUILE_LOAD_PATH
+
 # Adjust the prompt depending on whether we're in 'guix environment'.
 if [ -n "$GUIX_ENVIRONMENT" ]
 then

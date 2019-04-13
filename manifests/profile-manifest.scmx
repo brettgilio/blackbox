@@ -8,7 +8,7 @@
    "font-fira-mono"
    "font-fira-sans"
    "font-gnu-freefont-ttf"
-   "font-config"
+   "fontconfig"
    "git"	
    "git:send-email"
    "gnupg"

@@ -28,6 +28,7 @@
 
 ;; Regularly loaded modules.
 (require 'module-appearance)
+(require 'module-mail)
 
 ;; Lazily loaded modules.
 (use-package module-pg

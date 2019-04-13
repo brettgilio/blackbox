@@ -12,6 +12,8 @@
    "git"	
    "git:send-email"
    "gnupg"
+   "guile-daemon"
+   "guile-xosd"
    "mu"
    "offlineimap"
    "openssh"
@@ -21,4 +23,5 @@
    "python:tk"
    "sbcl-next"
    "sbcl-next:lib"
-   "unzip"))
+   "unzip"
+   "xosd"))

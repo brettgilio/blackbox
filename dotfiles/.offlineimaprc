@@ -6,7 +6,7 @@ pythonfile = /home/brettg/Repos/guix-system/bin/offlineimap.py
 [Account Posteo]
 localrepository = LocalPosteo
 remoterepository = RemotePosteo
-posysynchook = mu index --maildir ~/Maildir
+postsynchook = mu index --maildir ~/Maildir
 autorefresh = 5
 quick = 10
 

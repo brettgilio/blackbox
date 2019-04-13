@@ -35,3 +35,6 @@
 
 (use-package module-python
   :hook (after-init . module-python//load-lsp))
+
+(use-package module-readers
+  :hook (after-init . module-readers//load-readers))

@@ -39,3 +39,6 @@
 
 (use-package module-readers
   :hook (after-init . module-readers//load-readers))
+
+(use-package module-scheme
+  :hook (after-init . module-scheme//load-scheme))

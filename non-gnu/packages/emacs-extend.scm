@@ -137,7 +137,7 @@ as better scaling of and anti aliasing of the icons.")
 
 (define-public emacs-doom-modeline
   (let ((commit "acba2a0b6a6ee5d6f298e89706deb0c82693195c")
-        (revision "0"))
+        (revision "1"))
     (package
      (name "emacs-doom-modeline")
      (version (git-version "1.9.9" revision commit))

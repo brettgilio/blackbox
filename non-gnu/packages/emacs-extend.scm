@@ -364,3 +364,32 @@ use M-x company-coq-tutorial to open the tutorial.
 See https://github.com/FStarLang/fstar-mode.el for setup and usage tips.
 ")
      (license license:expat))))
+
+(define-public emacs-ccls
+  (let ((commit "3f7a981658ccd71d2e09b9ad2b31a1038e55dcd4")
+        (revision "0"))
+    (package
+     (name "emacs-ccls")
+     (version (git-version "0.0.0" revision commit))
+     (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/MaskRay/emacs-ccls.git")
+                    (commit commit)))
+              (sha256
+               (base32
+                "1pc0zchwwjdx8n4p1y3s0w9jv2blq7p2ymm9218nrghjjmj2fxnl"))
+              (file-name (git-file-name name version))))
+     (build-system emacs-build-system)
+     (propagated-inputs
+      `(("emacs-lsp-mode" ,emacs-lsp-mode)
+	("emacs-dash" ,emacs-dash)
+	("emacs-projectile" ,emacs-projectile)))
+     (home-page
+      "https://github.com/MaskRay/emacs-ccls")
+     (synopsis "ccls client for lsp-mode")
+     (description
+      "To enable, call (lsp) in c-mode-hook c++-mode-hook objc-mode-hook.
+See more at https://github.com/MaskRay/ccls/wiki/Emacs
+")
+     (license license:expat))))

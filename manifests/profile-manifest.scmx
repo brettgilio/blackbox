@@ -25,5 +25,6 @@
    "python:tk"
    "sbcl-next"
    "sbcl-next:lib"
+   "screen"
    "unzip"
    "xosd"))

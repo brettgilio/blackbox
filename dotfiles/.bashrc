@@ -19,6 +19,11 @@ fi
 # Source the system-wide file.
 source /etc/bashrc
 
+# Start GNU Screen
+if [[ -z "$STY" ]]; then
+   screen -xRR session_name
+fi
+
 # Aliases
 alias emacs-env='guix environment -m $HOME/Repos/guix-system/manifests/emacs-manifest.scmx'
 alias profile-install='guix package -m $HOME/Repos/guix-system/manifests/profile-manifest.scmx'

@@ -42,3 +42,6 @@
 
 (use-package module-scheme
   :hook (after-init . module-scheme//load-scheme))
+
+(use-package module-ocaml
+  :hook (after-init . module-ocaml//load-merlin))

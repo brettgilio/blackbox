@@ -1,5 +1,7 @@
 (specifications->manifest
- '("emacs-ccls"
+ '("bear"
+   "emacs-ccls"
    "emacs-company-lsp"
    "emacs-lsp-mode"
-   "ccls"))
+   "ccls"
+   "gcc-toolchain"))

@@ -46,3 +46,6 @@
 (use-package module-ocaml
   :hook (after-init . module-ocaml//load-merlin)
   :disabled)
+
+(use-package module-cobjc
+  :hook (after-init . module-cobjc//load-lsp))

@@ -13,6 +13,7 @@
     :hook ((c-mode c++-mode objc-mode) .
 	   (lambda ()
 	     (require 'ccls)
-	     (lsp)))))
+	     (lsp)))
+    :defer t))
 
 (provide 'module-cobjc)

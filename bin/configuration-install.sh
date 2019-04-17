@@ -6,7 +6,7 @@ cd ..
 
 # Symlink ./dotfiles to appropriate locations
 
-for dotfile in screenrc bash_profile bashrc gitconfig guile nanorc nix-channels offlineimaprc Xdefaults Xresources
+for dotfile in screenrc bash_profile bashrc gitconfig guile nanorc nix-channels offlineimaprc Xdefaults Xresources zprofile gdbinit
 	       
 do
     if [ -f "$HOME/.${dotfile}" ]; then

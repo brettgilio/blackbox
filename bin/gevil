@@ -23,8 +23,8 @@
        
        (descriptions '("Spin-up preconfigured environments"
 		       "Create application environments"
-		       "Options for local and system configuration"
-		       "Options for managing Nix properties."))
+		       "Local and system configuration"
+		       "Manage Nix properties"))
 
        ;; Create menu items for each label
        (main-items (map (lambda (name desc) (new-item name desc))

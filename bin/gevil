@@ -15,20 +15,22 @@
 (keypad! stdscr #t)
 (init-pair! 1 COLOR_RED COLOR_BLACK)
 
-(let* (;; Labels for the menu items
+(let* (;; Labels for the main menu items
        (names '("Development   "
+		"Applications"
 		"Guix"
-		"Exit"))
+		"Nix"))
        
        (descriptions '("Spin-up preconfigured environments"
+		       "Create application environments"
 		       "Options for local and system configuration"
-		       ""))
+		       "Options for managing Nix properties."))
 
        ;; Create menu items for each label
        (main-items (map (lambda (name desc) (new-item name desc))
                       names
                       descriptions))
-       ;; Create the menu
+       ;; Create the main menu
        (main-menu (new-menu main-items))
 
        ;; Make a windows to hold the menu
@@ -57,7 +59,7 @@
   (addch main-menu-win (acs-rtee))
 
   (move stdscr (- (lines) 2) 0)
-  (addstr stdscr "F1 to Exit")
+  (addstr stdscr "Q to quit.")
   (refresh stdscr)
 
   ;; Post the menu
@@ -66,7 +68,7 @@
 
   ;; Draw the menu
   (move stdscr (- (lines) 2) 0)
-  (addstr stdscr "F1 to Exit")
+  (addstr stdscr "Q to quit.")
 
   ;; Process the up and down arrow keys.  Break the loop if F1 is
   ;; pressed.  Ignore other keys.
@@ -100,7 +102,7 @@
         (sleep 2)))
 
      ;; If F1 is pressed, quit.  Otherwise, loop.
-     ((not (eqv? c (key-f 1)))
+     ((not (or (eqv? c #\Q) (eqv? c #\q)))
       (loop (getch stdscr)))))
 
   (endwin))

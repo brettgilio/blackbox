@@ -1,9 +1,12 @@
 (define-module (system-configuration libre-system-4-19-x)
   #:use-module (gnu)
   #:use-module (gnu system nss)
+  #:use-module (gnu packages guile)
+  #:use-module (gnu packages guile-xyz)
   #:use-module (gnu packages lisp)
   #:use-module (gnu packages linux)
   #:use-module (gnu packages ncurses)
+  #:use-module (gnu packages python)
   #:use-module (gnu packages xorg))
 
 (use-service-modules desktop)
@@ -42,7 +45,9 @@
 		  xrdb
 		  xsetroot
 		  xrandr
-		  dialog
+		  guile-2.2
+		  guile-ncurses
+		  python
                   %base-packages))
  
  (services (cons* %desktop-services))

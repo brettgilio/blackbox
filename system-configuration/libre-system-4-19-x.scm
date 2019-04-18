@@ -3,6 +3,7 @@
   #:use-module (gnu system nss)
   #:use-module (gnu packages lisp)
   #:use-module (gnu packages linux)
+  #:use-module (gnu packages ncurses)
   #:use-module (gnu packages xorg))
 
 (use-service-modules desktop)
@@ -41,6 +42,7 @@
 		  xrdb
 		  xsetroot
 		  xrandr
+		  dialog
                   %base-packages))
  
  (services (cons* %desktop-services))

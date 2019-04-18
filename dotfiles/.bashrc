@@ -32,6 +32,7 @@ alias emacs-pg='proofgeneral --no-x-resources'
 
 # Exports
 export GUILE_LOAD_PATH=/home/brettg/Repos/guix-system:$GUILE_LOAD_PATH
+export PATH=/home/brettg/.local/bin:$PATH
 
 # Adjust the prompt depending on whether we're in 'guix environment'.
 if [ -n "$GUIX_ENVIRONMENT" ]

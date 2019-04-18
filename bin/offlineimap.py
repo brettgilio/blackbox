@@ -1,4 +1,4 @@
-#!/home/brettg/.guix-profile/bin/python3
+#!/run/current-system/profile/bin/python3
 
 from subprocess import check_output
 

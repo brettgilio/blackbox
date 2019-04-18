@@ -1,7 +1,7 @@
 #!/home/brettg/.guix-profile/bin/guile -s
 !#
 
-(define-module (bin GUtil)
+(define-module (bin gevil)
   #:use-module (srfi srfi-1)
   #:use-module (ncurses curses)
   #:use-module (ncurses form)

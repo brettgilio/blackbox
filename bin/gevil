@@ -25,44 +25,44 @@
 		       ""))
 
        ;; Create menu items for each label
-       (my-items (map (lambda (name desc) (new-item name desc))
+       (main-items (map (lambda (name desc) (new-item name desc))
                       names
                       descriptions))
        ;; Create the menu
-       (my-menu (new-menu my-items))
+       (main-menu (new-menu main-items))
 
        ;; Make a windows to hold the menu
-       (my-menu-win (newwin 10 80 0 0)))
+       (main-menu-win (newwin 10 80 0 0)))
 
-  (keypad! my-menu-win #t)
+  (keypad! main-menu-win #t)
 
   ;; Set the main window and subwindow
-  (set-menu-win! my-menu my-menu-win)
-  (set-menu-sub! my-menu (derwin my-menu-win 6 60 3 1))
+  (set-menu-win! main-menu main-menu-win)
+  (set-menu-sub! main-menu (derwin main-menu-win 6 60 3 1))
 
   ;; Set the menu mark string
-  (set-menu-mark! my-menu " * ")
+  (set-menu-mark! main-menu " * ")
 
   ;; Print a border around the main window, and a title
-  (box my-menu-win 0 0)
+  (box main-menu-win 0 0)
 
-  (move my-menu-win 1 20)
-  (addstr my-menu-win "GEvil - Quick exec tool for Guix & Guile")
+  (move main-menu-win 1 20)
+  (addstr main-menu-win "GEvil - Quick exec tool for Guix & Guile")
 
-  (move my-menu-win 2 0)
-  (addch my-menu-win (acs-ltee))
-  (move my-menu-win 2 1)
-  (hline my-menu-win (acs-hline) 75)
-  (move my-menu-win 2 75)
-  (addch my-menu-win (acs-rtee))
+  (move main-menu-win 2 0)
+  (addch main-menu-win (acs-ltee))
+  (move main-menu-win 2 1)
+  (hline main-menu-win (acs-hline) 75)
+  (move main-menu-win 2 75)
+  (addch main-menu-win (acs-rtee))
 
   (move stdscr (- (lines) 2) 0)
   (addstr stdscr "F1 to Exit")
   (refresh stdscr)
 
   ;; Post the menu
-  (post-menu my-menu)
-  (refresh my-menu-win)
+  (post-menu main-menu)
+  (refresh main-menu-win)
 
   ;; Draw the menu
   (move stdscr (- (lines) 2) 0)
@@ -70,32 +70,32 @@
 
   ;; Process the up and down arrow keys.  Break the loop if F1 is
   ;; pressed.  Ignore other keys.
-  (let loop ((c (getch my-menu-win)))
+  (let loop ((c (getch main-menu-win)))
     (cond
 
      ;; Move down the menu when down arrow is pressed and then loop.
      ((eqv? c KEY_DOWN)
       (begin
-        (menu-driver my-menu REQ_DOWN_ITEM)
-        (loop (getch my-menu-win))))
+        (menu-driver main-menu REQ_DOWN_ITEM)
+        (loop (getch main-menu-win))))
 
      ;; Move up the menu when the up arrow is pressed and then loop.
      ((eqv? c KEY_UP)
       (begin
-        (menu-driver my-menu REQ_UP_ITEM)
-        (loop (getch my-menu-win))))
+        (menu-driver main-menu REQ_UP_ITEM)
+        (loop (getch main-menu-win))))
 
      ;; When enter is pressed, return the selection and quit.
      ((or (eqv? c KEY_ENTER)
           (eqv? c #\cr)
           (eqv? c #\nl))
       (begin
-        (unpost-menu my-menu)
+        (unpost-menu main-menu)
         (move stdscr (- (lines) 4) 0)
         (addstr stdscr
                 (format #f "You selected item #~a: ~a"
-                        (item-index (current-item my-menu))
-                        (item-name (current-item my-menu))))
+                        (item-index (current-item main-menu))
+                        (item-name (current-item main-menu))))
         (refresh stdscr)
         (sleep 2)))
 

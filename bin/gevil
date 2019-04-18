@@ -1,4 +1,4 @@
-#!/home/brettg/.guix-profile/bin/guile -s
+#!/run/current-system/profile/bin/guile -s
 !#
 
 (define-module (bin gevil)

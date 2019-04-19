@@ -5,10 +5,53 @@
   #:use-module (srfi srfi-1)
   #:use-module (newt))
 
+;; Definitions
 
-(newt-init)
-(clear-screen)
+(define (%init)
+  (newt-init)
+  (clear-screen))
 
-;;
+(define (%final)
+  (clear-screen)
+  (newt-finish))
 
-(newt-finish)
+(define (%name)
+  "GScale - Exec Tool for Guix/Guile")
+
+;; Begin Newt
+
+(%init)
+
+(push-help-line "[Version 0.1]")
+(make-window 4 2 60 25 (%name))
+
+(define lb1
+  (make-listbox 1 1 10 (logior FLAG-BORDER)))
+
+(define f1 (make-form))
+
+(add-component-to-form f1 lb1)
+
+(define item1 (append-entry-to-listbox lb1 "Development Environments"))
+(define item2 (append-entry-to-listbox lb1 "Applications Environments"))
+(define item3 (append-entry-to-listbox lb1 "Guix Operations"))
+(define item4 (append-entry-to-listbox lb1 "Nix Operations"))
+
+(set-listbox-width lb1 58)
+(set-current-listbox-entry-by-key lb1 item1)
+
+(define cbt1 (make-checkboxtree 2 12 4 (logior FLAG-BORDER)))
+
+(define citem1 (add-entry-to-checkboxtree cbt1 "AD-HOC ENTRIES" 0))
+(define citem2 (add-entry-to-checkboxtree cbt1 "P/EXEC" 0))
+
+(add-components-to-form f1 cbt1)
+
+(define b1 (make-button 2 21 "Run"))
+(define b2 (make-button 11 21 "Quit"))
+
+(add-components-to-form f1 b1 b2)
+
+(run-form f1)
+
+(%final)

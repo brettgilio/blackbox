@@ -2,17 +2,8 @@
 !#
 
 (define-module (bin gscale)
-  #:use-module (newt bindings)
-  #:use-module (newt components)
-  #:use-module (newt checkboxtree)
-  #:use-module (newt entry)
-  #:use-module (newt form)
-  #:use-module (newt grid)
-  #:use-module (newt listbox)
-  #:use-module (newt scale)
-  #:use-module (newt textbox)
-  #:use-module (newt window)
-  #:use-module (srfi srfi-1))
+  #:use-module (srfi srfi-1)
+  #:use-module (newt))
 
 
 (newt-init)

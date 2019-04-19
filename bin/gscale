@@ -18,11 +18,14 @@
 (define (%name)
   "GScale - Exec Tool for Guix/Guile")
 
+(define (%version)
+  "0.1")
+
 ;; Begin Newt
 
 (%init)
 
-(push-help-line "[Version 0.1]")
+(push-help-line (string-append "Version " (%version)))
 (make-window 4 2 60 25 (%name))
 
 (define lb1

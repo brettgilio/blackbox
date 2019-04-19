@@ -1,5 +1,5 @@
 (specifications->manifest
  '("coq"
    "emacs-company-coq"
-   "proof-general@4.4-1.8f90ac9"
+   "proof-general@4.4-2.612eac5"
    "z3"))

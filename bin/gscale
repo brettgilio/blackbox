@@ -21,7 +21,7 @@
   "GScale - Exec Tool for Guix/Guile")
 
 (define (%version)
-  "0.1")
+  "0.2")
 
 (define screen-columns (make-parameter 0))
 (define screen-rows (make-parameter 0))

@@ -40,7 +40,7 @@ session."
 (%init)
 
 (push-help-line (string-append "Version " (%version)))
-(make-window 4 2 60 25 (%name))
+(make-window 4 2 (- (screen-columns) 8) 25 (%name))
 
 (define lb1
   (make-listbox 1 1 10 (logior FLAG-BORDER)))

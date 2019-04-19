@@ -46,7 +46,7 @@
 		  xsetroot
 		  xrandr
 		  guile-2.2
-		  guile-ncurses
+		  guile-newt
 		  python
                   %base-packages))
  

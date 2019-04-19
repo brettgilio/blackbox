@@ -4,9 +4,16 @@
 (define-module (bin gscale)
   #:use-module (srfi srfi-1)
   #:use-module (ice-9 receive)
-  #:use-module (newt))
+  #:use-module (newt)
+  #:use-module (guile-modules gscale screen))
 
 ;; Definitions
+
+(define (%name)
+  "GScale - Exec Tool for Guix/Guile")
+
+(define (%version)
+  "0.2")
 
 (define (%init)
   (newt-init)
@@ -16,24 +23,6 @@
 (define (%final)
   (clear-screen)
   (newt-finish))
-
-(define (%name)
-  "GScale - Exec Tool for Guix/Guile")
-
-(define (%version)
-  "0.2")
-
-(define screen-columns (make-parameter 0))
-(define screen-rows (make-parameter 0))
-
-(define (set-screen-size!)
-  "Set the parameters 'screen-columns' and 'screen-rows' to the
-number of columns and rows respectively of the current terminal
-session."
-  (receive (columns rows)
-      (screen-size)
-    (screen-columns columns)
-    (screen-rows rows)))
 
 ;; Begin Newt
 

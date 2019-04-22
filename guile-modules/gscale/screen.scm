@@ -1,7 +1,7 @@
 (define-module (guile-modules gscale screen)
   #:use-module (srfi srfi-1)
   #:use-module (ice-9 receive)
-  #:use-module (newt)
+  #:use-module (newt bindings)
   #:export (screen-columns
 	    screen-rows
 	    set-screen-size!))

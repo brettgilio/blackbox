@@ -1,6 +1,5 @@
 (define-module (channels)
-  #:use-module (guix channels)
-  #:use-module (newt))
+  #:use-module (guix channels))
 
 (cons (channel
        (name 'guix-system)

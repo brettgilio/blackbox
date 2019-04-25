@@ -399,3 +399,26 @@ See https://github.com/FStarLang/fstar-mode.el for setup and usage tips.
 See more at https://github.com/MaskRay/ccls/wiki/Emacs
 ")
      (license license:expat))))
+
+(define-public emacs-quick-peek
+  (let ((commit "fd8a6c81422932539d221f39f18c90f2811f2dd9")
+        (revision "0"))
+    (package
+     (name "emacs-quick-peek")
+     (version (git-version "0.0.0" revision commit))
+     (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/cpitclaudel/quick-peek.git")
+                    (commit commit)))
+              (sha256
+               (base32
+                "18jr3syd7jd809qq1j61zwaaclmqn24qyb0mv0q8sj6ac4vzl1c3"))
+              (file-name (git-file-name name version))))
+     (build-system emacs-build-system)
+     (home-page "https://github.com/cpitclaudel/quick-peek")
+     (synopsis "Inline quick-peek windows")
+     (description
+      "")
+     (license license:gpl3+))))
+

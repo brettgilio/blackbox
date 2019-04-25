@@ -331,9 +331,10 @@ use M-x company-coq-tutorial to open the tutorial.
       "")
      (license #f))))
 
+;; Track master
 (define-public emacs-fstar-mode
-  (let ((commit "3a9be64827bbed8e34d38803b5c44d8d4f6cd688")
-        (revision "0"))
+  (let ((commit "d63d1c48573c82317e5b5991486d1595094bcccd")
+        (revision "1"))
     (package
      (name "emacs-fstar-mode")
      (version (git-version "0.9.4.0" revision commit))
@@ -344,11 +345,16 @@ use M-x company-coq-tutorial to open the tutorial.
                     (commit commit)))
               (sha256
                (base32
-                "0manmkd66355g1fw2q1q96ispd0vxf842i8dcr6g592abrz5lhi7"))
+                "0zz4dv28lpycjryb2lswpjwh4lhf6hh73grisk0ql33hg4rmsqwx"))
               (file-name (git-file-name name version))))
      (build-system emacs-build-system)
      (propagated-inputs
-      `(("emacs-dash" ,emacs-dash)))
+      `(("emacs-dash" ,emacs-dash)
+	("emacs-company" ,emacs-company)
+	("emacs-quick-peek" ,emacs-quick-peek)
+	("emacs-yasnippet" ,emacs-yasnippet)
+	("emacs-flycheck" ,emacs-flycheck)
+	("emacs-company-quickhelp" ,emacs-company-quickhelp)))
      (home-page
       "https://github.com/FStarLang/fstar.el")
      (synopsis "Support for F* programming")

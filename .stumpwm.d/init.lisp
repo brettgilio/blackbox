@@ -10,4 +10,5 @@
 		       :name name
 		       :type "lisp")))
 
+(load-user-module "keybindings")
 (load-user-module "theme")

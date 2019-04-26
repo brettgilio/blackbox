@@ -16,6 +16,7 @@
    "guile-daemon"
    "guile-readline"
    "guile-xosd"
+   "htop"
    "mu"
    "offlineimap"
    "openssh"

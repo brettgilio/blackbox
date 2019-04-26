@@ -10,5 +10,7 @@
 		       :name name
 		       :type "lisp")))
 
+(run-commands "exec xterm")
+
 (load-user-module "keybindings")
 (load-user-module "theme")

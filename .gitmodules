@@ -1,0 +1,3 @@
+[submodule "guix-channel"]
+	path = guix-channel
+	url = https://git.sr.ht/~brettgilio/guix-channel

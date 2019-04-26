@@ -4,6 +4,7 @@
    "emacs-atom-one-dark-theme"
    "emacs-company"
    "emacs-company-quickhelp"
+   "emacs-disk-usage"
    "emacs-doom-modeline"
    "emacs-guix"
    "emacs-helm"

@@ -44,8 +44,7 @@
   :hook (after-init . module-scheme//load-scheme))
 
 (use-package module-ocaml
-  :hook (after-init . module-ocaml//load-merlin)
-  :disabled)
+  :hook (after-init . module-ocaml//load-merlin))
 
 (use-package module-cobjc
   :hook (after-init . module-cobjc//load-lsp))

@@ -26,5 +26,6 @@
    "python:tk"
    "screen"
    "scrot"
+   "sshfs"
    "unzip"
    "xosd"))

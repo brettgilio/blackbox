@@ -27,5 +27,7 @@
    "screen"
    "scrot"
    "sshfs"
+   "syncthing"
+   "syncthing:utils"
    "unzip"
    "xosd"))

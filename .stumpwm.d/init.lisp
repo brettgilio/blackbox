@@ -11,6 +11,7 @@
 		       :type "lisp")))
 
 (run-commands "exec xterm")
+(run-commands "exec syncthing")
 
 (load-user-module "keybindings")
 (load-user-module "theme")

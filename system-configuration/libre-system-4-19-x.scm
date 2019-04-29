@@ -7,9 +7,10 @@
   #:use-module (gnu packages linux)
   #:use-module (gnu packages ncurses)
   #:use-module (gnu packages python)
-  #:use-module (gnu packages xorg))
+  #:use-module (gnu packages xorg)
+  #:use-module (srfi srfi-1))
 
-(use-service-modules desktop)
+(use-service-modules desktop xorg)
 (use-package-modules certs gnome)
 
 (operating-system
@@ -41,6 +42,7 @@
  (packages (cons* nss-certs         ;for HTTPS access
                   gvfs              ;for user mounts
 		  stumpwm
+		  xauth
 		  xterm
 		  xrdb
 		  xsetroot
@@ -50,7 +52,11 @@
 		  python
                   %base-packages))
  
- (services (cons* %desktop-services))
+ (services (cons* (service slim-service-type)
+		  (remove (lambda (service)
+			    (eq? (service-kind service)
+				 gdm-service-type))
+			  %desktop-services)))
  
  ;; Allow resolution of '.local' host names with mDNS.
  (name-service-switch %mdns-host-lookup-nss))

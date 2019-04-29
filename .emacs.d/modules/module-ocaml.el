@@ -1,6 +1,7 @@
 (defun module-ocaml//load-merlin ()
 
   (use-package merlin
+    :after (tuareg)
     :config (setq merlin-command
 		  (lambda ()
 		    (expand-file-name
@@ -9,7 +10,6 @@
 			 (error "GUIX_ENVIRONMENT is not defined."))))))
 
   (use-package tuareg
-    :after (merlin)
     :mode ("\\.ml\\'" . tuareg-mode)
     :hook ((tuareg-mode . merlin-mode)
 	   (tuareg-mode . company-mode))

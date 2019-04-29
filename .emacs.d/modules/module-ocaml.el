@@ -6,13 +6,14 @@
 		    (expand-file-name
 		     "bin/ocamlmerlin"
 		     (or (getenv "GUIX_ENVIRONMENT")
-			 (error "GUIX_ENVIRONMENT is not defined.")))))
-    :defer t)
+			 (error "GUIX_ENVIRONMENT is not defined."))))))
 
   (use-package tuareg
     :after (merlin)
     :mode ("\\.ml\\'" . tuareg-mode)
-    :hook ((tuareg-mode . merlin-mode))))
+    :hook ((tuareg-mode . merlin-mode)
+	   (tuareg-mode . company-mode))
+    :defer t))
 
 ;; Implement merlin-company support
 ;; https://github.com/ocaml/merlin/blob/master/emacs/merlin-company.el

@@ -11,3 +11,4 @@ emms/
 tramp
 transient/
 *.el~
+request/

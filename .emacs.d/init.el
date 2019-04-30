@@ -51,3 +51,6 @@
 
 (use-package module-fsharp
   :hook (after-init . module-fsharp//load-fsi))
+
+(use-package module-hy
+  :hook (after-init . module-hy//load-hy))

@@ -9,7 +9,7 @@ let
 in
   with nixpkgs-master;
   stdenv.mkDerivation {
-      name = "nix_is_painful";
+      name = "rust-stable";
       buildInputs = [
           pkgs.rustChannels.stable.rust
           pkgs.rustChannels.stable.rust-src

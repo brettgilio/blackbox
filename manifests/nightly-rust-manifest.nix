@@ -9,7 +9,7 @@ let
 in
   with nixpkgs-master;
   stdenv.mkDerivation {
-      name = "nix_is_painful";
+      name = "rust-nightly";
       buildInputs = [
           pkgs.rustChannels.nightly.rust
           pkgs.rustChannels.nightly.rust-src

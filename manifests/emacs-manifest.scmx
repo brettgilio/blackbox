@@ -10,5 +10,6 @@
    "emacs-helm"
    "emacs-magit"
    "emacs-magit-popup"
+   "emacs-nix-mode"
    "emacs-pdf-tools"
    "emacs-use-package"))

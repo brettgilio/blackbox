@@ -21,7 +21,8 @@ source /etc/bashrc
 
 # Start GNU Screen
 if [[ -z "$STY" ]]; then
-   screen -xRR session_name
+    screen -xRR session_name \
+	   -m guile
 fi
 
 # Aliases

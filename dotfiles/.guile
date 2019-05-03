@@ -19,7 +19,7 @@ for a colorful Guile experience.\n\n"))))
 
 (add-to-load-path "/home/brettg/Repos/guix-system") ; Make not ugly
 
-(if (string? (getenv "GUIX_ENVIRONMENT"))
+(let ((guix-env (getenv "GUIX_ENVIRONMENT")))
+  (when guix-env
     (add-to-load-path
-     (string-append
-      (getenv "GUIX_ENVIRONMENT") "/share/guile/site/2.2")))
+     (string-append guix-env "/share/guile/site/2.2"))))

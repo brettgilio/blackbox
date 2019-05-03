@@ -18,3 +18,9 @@ convenient interactive line editing and input history.\n\n")))
 for a colorful Guile experience.\n\n"))))
 
 (add-to-load-path "/home/brettg/Repos/guix-system") ; Make not ugly
+
+(if
+ (string? (getenv "GUIX_ENVIRONMENT"))
+ (add-to-load-path
+  (string-append
+   (getenv "GUIX_ENVIRONMENT") "/share/guile/site/2.2")))

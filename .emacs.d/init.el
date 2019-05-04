@@ -55,3 +55,6 @@
 
 (use-package module-hy
   :hook (after-init . module-hy//load-hy))
+
+(use-package module-haskell
+  :hook (after-init . module-haskell//load-lsp))

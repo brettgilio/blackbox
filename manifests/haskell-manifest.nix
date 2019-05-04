@@ -35,7 +35,7 @@ let
           extra
         ]);
 
-  hs = [ cabal-install ghc hie ];
+  hs = [ cabal-install ghc hie stack ];
 in
   mkShell {
     name = "${compiler}-sh";

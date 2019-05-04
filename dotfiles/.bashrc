@@ -26,10 +26,9 @@ if [[ -z "$STY" ]]; then
 fi
 
 # Aliases
-alias emacs-env='guix environment -m $HOME/Repos/guix-system/manifests/emacs-manifest.scmx'
-alias profile-install='guix package -m $HOME/Repos/guix-system/manifests/profile-manifest.scmx'
+alias emacs-env='guix environment -m $HOME/Repos/guix-system/manifests/guix/emacs-manifest.scmx'
+alias profile-install='guix package -m $HOME/Repos/guix-system/manifests/guix/profile-manifest.scmx'
 alias emacs='emacs --no-x-resources'
-alias emacs-pg='proofgeneral --no-x-resources'
 
 # Exports
 export GUILE_LOAD_PATH=/home/brettg/Repos/guix-system:$GUILE_LOAD_PATH

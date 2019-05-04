@@ -10,7 +10,7 @@
 		       :name name
 		       :type "lisp")))
 
-(run-commands "exec xterm")
+(run-commands "exec feh --bg-scale ~/Pictures/gnulinux.png")
 (run-commands "exec syncthing")
 
 (load-user-module "keybindings")

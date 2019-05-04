@@ -3,6 +3,7 @@
    "alsa-utils"
    "curl"
    "curl:doc"
+   "feh"
    "font-adobe-source-code-pro"
    "font-fira-code"
    "font-fira-mono"

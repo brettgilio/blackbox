@@ -26,8 +26,9 @@ if [[ -z "$STY" ]]; then
 fi
 
 # Aliases
-alias emacs-env='guix environment -m $HOME/Repos/guix-system/manifests/guix/emacs-manifest.scmx'
-alias profile-install='guix package -m $HOME/Repos/guix-system/manifests/guix/profile-manifest.scmx'
+alias emacs-env='guix environment -m $HOME/Repos/guix-system/manifests/guix/emacs-manifest.scm'
+alias profile-install='guix package -m $HOME/Repos/guix-system/manifests/guix/profile-manifest.scm'
+alias daily-profile='nix-shell $HOME/Repos/guix-system/manifests/nix/daily-manifest.nix'
 alias emacs='emacs --no-x-resources'
 
 # Exports

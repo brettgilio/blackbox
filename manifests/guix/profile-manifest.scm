@@ -25,6 +25,7 @@
    "pinentry"
    "python"
    "python:tk"
+   "sbcl-next"
    "screen"
    "scrot"
    "sshfs"

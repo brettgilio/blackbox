@@ -31,5 +31,7 @@
    "sshfs"
    "syncthing"
    "syncthing:utils"
+   "transset-df"
    "unzip"
+   "xcompmgr"
    "xosd"))

@@ -25,6 +25,9 @@ if [[ -z "$STY" ]]; then
 	   -m guile
 fi
 
+# XWindow transparency
+[ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
+
 # Aliases
 alias emacs-env='guix environment -m $HOME/Repos/guix-system/manifests/guix/emacs-manifest.scm'
 alias profile-install='guix package -m $HOME/Repos/guix-system/manifests/guix/profile-manifest.scm'

@@ -25,6 +25,7 @@
    "pinentry"
    "python"
    "python:tk"
+   "qemu"
    "sbcl-next"
    "screen"
    "scrot"

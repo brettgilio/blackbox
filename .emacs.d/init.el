@@ -12,7 +12,11 @@
 (setq modules-dir
       (expand-file-name "modules" user-emacs-directory))
 
+(setq themes-dir
+      (expand-file-name "doom-themes" user-emacs-directory))
+
 (add-to-list 'load-path modules-dir)
+(add-to-list 'load-path themes-dir)
 
 ;; Create custom.el file if it doesn't exist, and load it.
 (let ((fn (expand-file-name "custom.el" user-emacs-directory)))

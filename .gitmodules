@@ -1,3 +1,9 @@
 [submodule "guix-channel"]
 	path = guix-channel
 	url = https://git.sr.ht/~brettgilio/guix-channel
+[submodule "emacs-doom-themes"]
+	path = emacs-doom-themes
+	url = https://github.com/hlissner/emacs-doom-themes.git
+[submodule ".emacs.d/doom-themes"]
+	path = .emacs.d/doom-themes
+	url = https://github.com/hlissner/emacs-doom-themes.git

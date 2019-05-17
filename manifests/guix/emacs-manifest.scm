@@ -1,7 +1,6 @@
 (specifications->manifest
  '("emacs"
    "emacs-all-the-icons@3.2.0-1.f996faf"
-   "emacs-atom-one-dark-theme"
    "emacs-company"
    "emacs-company-quickhelp"
    "emacs-disk-usage"

@@ -20,7 +20,10 @@
 	   (after-make-frame-functions . module-appearance//default-theme//doom-modeline-daemon)))
   
   (use-package display-line-numbers
-    :hook (prog-mode . display-line-numbers-mode)))
+    :hook (prog-mode . display-line-numbers-mode))
+
+  (use-package fancy-battery
+    :hook (after-init . fancy-battery-mode)))
 
 (module-appearance//default-theme)
 

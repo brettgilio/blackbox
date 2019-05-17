@@ -7,7 +7,8 @@
   (display-time-mode)
   (global-hl-line-mode 1)
 
-  (load-theme 'atom-one-dark t)
+  (require 'doom-themes)
+  (load-theme 'doom-city-lights t)
   
   (defun module-appearance//default-theme//doom-modeline-daemon (_frame)
     "`doom-modeline' strangely does not handle well under a daemonized Emacs."

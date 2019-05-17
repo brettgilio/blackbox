@@ -5,6 +5,7 @@
    "emacs-company-quickhelp"
    "emacs-disk-usage"
    "emacs-doom-modeline"
+   "emacs-fancy-battery"
    "emacs-guix"
    "emacs-helm"
    "emacs-magit"

@@ -12,4 +12,5 @@
    "emacs-magit-popup"
    "emacs-nix-mode"
    "emacs-pdf-tools"
-   "emacs-use-package"))
+   "emacs-use-package"
+   "emacs-webpaste"))

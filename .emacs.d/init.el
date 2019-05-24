@@ -34,6 +34,7 @@
 (require 'module-appearance)
 (require 'module-mail)
 (require 'module-helm)
+(require 'module-irc)
 
 ;; Lazily loaded modules.
 (use-package module-pg

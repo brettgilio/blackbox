@@ -25,7 +25,7 @@
          "linux-" version ".tar.xz")))
 
 (define-public linux-nonfree-4.19
-  (let* ((version "4.19.44"))
+  (let* ((version "4.19.45"))
     (package
      (inherit linux-libre)
      (name "linux-nonfree")
@@ -35,7 +35,7 @@
 	      (uri (linux-nonfree-urls version))
 	      (sha256
 	       (base32
-		"125jlsy42qlprg6yhinsm87ir7x4iw2v2fd0myjihmkpjgll4xkh"))))
+		"0awx9d8i73naz5b27vzjpv5l4vblr65dvv1ci7dyxaihpcpyccgb"))))
      (synopsis "Mainline Linux kernel, nonfree binary blobs included.")
      (description "Linux is a kernel.")
      (home-page "http://kernel.org/")

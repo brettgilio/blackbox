@@ -6,6 +6,7 @@
    "emacs-disk-usage"
    "emacs-doom-modeline"
    "emacs-fancy-battery"
+   "emacs-gitpatch"
    "emacs-guix"
    "emacs-helm"
    "emacs-magit"
@@ -13,4 +14,5 @@
    "emacs-nix-mode"
    "emacs-pdf-tools"
    "emacs-use-package"
-   "emacs-webpaste"))
+   "emacs-webpaste"
+   "emacs-yasnippet"))

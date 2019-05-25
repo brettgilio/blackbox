@@ -26,7 +26,6 @@
    "python"
    "python:tk"
    "qemu"
-   "sbcl-next"
    "screen"
    "scrot"
    "sshfs"

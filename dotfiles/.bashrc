@@ -30,8 +30,8 @@ fi
 
 # Aliases
 alias emacs-env='guix environment -m $HOME/Repos/guix-system/manifests/guix/emacs-manifest.scm'
-alias profile-install='guix package -m $HOME/Repos/guix-system/manifests/guix/profile-manifest.scm'
-alias daily-profile='nix-shell $HOME/Repos/guix-system/manifests/nix/daily-manifest.nix'
+alias guix-profile-install='guix package -m $HOME/Repos/guix-system/manifests/profiles/profile-manifest.scm'
+alias nix-profile-install='nix-env -f $HOME/Repos/guix-system/manifests/profiles/profile-manifest.nix -i --remove-all'
 alias emacs='emacs --no-x-resources'
 
 # Exports

@@ -19,6 +19,9 @@
   	   "#guile"
   	   "#guix"
   	   "#idris"
-	   "#coq"))))
+	   "#coq"
+	   "#agda"
+	   "##hott"))))
+
 
 (provide 'module-irc)

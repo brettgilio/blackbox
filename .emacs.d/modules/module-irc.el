@@ -1,5 +1,4 @@
 (defun module-irc//load-erc ()
-  (interactive)
   
   (require 'erc-services)
   (erc-services-mode 1)
@@ -23,5 +22,9 @@
 	   "#agda"
 	   "##hott"))))
 
+(defalias 'exec-irc
+  (lambda ()
+    (interactive)
+    (module-irc//load-erc)))
 
 (provide 'module-irc)

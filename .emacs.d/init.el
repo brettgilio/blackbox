@@ -34,6 +34,8 @@
 (require 'module-appearance)
 (require 'module-mail)
 (require 'module-helm)
+
+;; Aliased function modules.
 (require 'module-irc)
 (require 'module-snippets)
 

@@ -34,7 +34,7 @@
 (require 'module-appearance)
 (require 'module-mail)
 (require 'module-helm)
-(require 'module-irc) ; move
+(require 'module-irc)
 (require 'module-snippets)
 
 ;; Lazily loaded modules.

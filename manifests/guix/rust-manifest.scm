@@ -3,4 +3,5 @@
 (specifications->manifest
  '("emacs-company-lsp"
    "emacs-lsp-mode"
-   "emacs-lsp-ui"))
+   "emacs-lsp-ui"
+   "emacs-rust-mode"))

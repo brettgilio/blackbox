@@ -66,3 +66,6 @@
 
 (use-package module-haskell
   :hook (after-init . module-haskell//load-lsp))
+
+(use-package module-rust
+  :hook (after-init . module-rust//load-lsp))

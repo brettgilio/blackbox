@@ -15,6 +15,7 @@ in
           pkgs.rustChannels.stable.rust-src
           pkgs.rustChannels.stable.rust-analysis
           pkgs.rls
+          pkgs.cmake
     ];
 
 

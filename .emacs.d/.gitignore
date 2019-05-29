@@ -12,3 +12,4 @@ tramp
 transient/
 *.el~
 request/
+*.elc

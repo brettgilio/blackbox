@@ -45,7 +45,7 @@
 
 ;; Aliased function modules.
 (require 'module-irc)
-(require 'module-snippets)
+;(require 'module-snippets)
 
 ;; Lazily loaded modules.
 (use-package module-pg
@@ -66,8 +66,8 @@
 (use-package module-cobjc
   :hook (after-init . module-cobjc//load-lsp))
 
-(use-package module-fsharp
-  :hook (after-init . module-fsharp//load-fsi))
+;(use-package module-fsharp
+;  :hook (after-init . module-fsharp//load-fsi))
 
 (use-package module-hy
   :hook (after-init . module-hy//load-hy))

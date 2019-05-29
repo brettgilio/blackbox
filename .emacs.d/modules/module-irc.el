@@ -20,7 +20,8 @@
   	   "#idris"
 	   "#coq"
 	   "#agda"
-	   "##hott"))))
+	   "##hott"
+	   "##C"))))
 
 (defalias 'exec-irc
   (lambda ()

@@ -31,5 +31,6 @@
    "sshfs"
    "transset-df"
    "unzip"
+   "xautolock"
    "xcompmgr"
    "xosd"))

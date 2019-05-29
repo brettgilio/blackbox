@@ -10,6 +10,12 @@
 ;; Disable the splash-screen.
 (setq inhibit-startup-message t)
 
+;; Establish auto-compiled bytecode and reject stale.
+(setq load-prefer-newer t)
+(require 'auto-compile)
+(auto-compile-on-load-mode)
+(auto-compile-on-save-mode)
+
 ;; Set path to modules, and `add-to-list'.
 (setq modules-dir
       (expand-file-name "modules" user-emacs-directory))

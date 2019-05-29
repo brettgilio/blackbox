@@ -1,6 +1,7 @@
 (specifications->manifest
  '("emacs"
    "emacs-all-the-icons@3.2.0-1.f996faf"
+   "emacs-auto-compile"
    "emacs-company"
    "emacs-company-quickhelp"
    "emacs-disk-usage"

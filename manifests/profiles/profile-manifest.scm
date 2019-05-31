@@ -18,6 +18,7 @@
    "guile-readline"
    "guile-xosd"
    "htop"
+   "meta-emacs"
    "mu"
    "offlineimap"
    "openssh"

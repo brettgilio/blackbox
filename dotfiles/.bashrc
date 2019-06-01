@@ -22,7 +22,7 @@ source /etc/bashrc
 # Start GNU Screen
 if [[ -z "$STY" ]]; then
     screen -xRR session_name \
-	   -m guile
+	#   -m guile
 fi
 
 # XWindow transparency

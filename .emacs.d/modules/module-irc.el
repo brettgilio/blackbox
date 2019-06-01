@@ -3,6 +3,7 @@
   (require 'erc-services)
   (erc-services-mode 1)
 
+  (setq erc-status-sidebar-width 25)
   (erc-status-sidebar-open)
   
   (setq erc-prompt-for-nickserv-password t)

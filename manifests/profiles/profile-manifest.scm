@@ -30,8 +30,6 @@
    "screen"
    "scrot"
    "sshfs"
-   "transset-df"
    "unzip"
    "xautolock"
-   "xcompmgr"
    "xosd"))

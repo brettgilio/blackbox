@@ -29,8 +29,6 @@ fi
 [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
 
 # Aliases
-alias guix-profile-install='guix package -m $HOME/Repos/guix-system/manifests/profiles/profile-manifest.scm'
-alias nix-profile-install='nix-env -f $HOME/Repos/guix-system/manifests/profiles/profile-manifest.nix -i --remove-all'
 alias emacs='emacs --no-x-resources'
 
 # Exports

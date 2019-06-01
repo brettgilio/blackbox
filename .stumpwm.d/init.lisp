@@ -11,7 +11,6 @@
 		       :type "lisp")))
 
 (run-commands "exec feh --bg-scale ~/Pictures/gnulinux.png")
-(run-commands "exec xcompmgr")
 
 (load-user-module "keybindings")
 (load-user-module "theme")

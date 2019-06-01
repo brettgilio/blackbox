@@ -38,9 +38,9 @@ export PATH=/home/brettg/.local/bin:$PATH
 # Adjust the prompt depending on whether we're in 'guix environment'.
 if [ -n "$GUIX_ENVIRONMENT" ]
 then
-    PS1='\u@\h \w [env]\$ '
+    PS1='\u@\h ==> \w [env] λ: '
 else
-    PS1='\u@\h \w\$ '
+    PS1='\u@\h ==> \w λ: '
 fi
 alias ls='ls -p --color=auto'
 alias ll='ls -l'

@@ -30,11 +30,30 @@ export GUILE_LOAD_PATH=/home/brettg/Repos/guix-system:$GUILE_LOAD_PATH
 export PATH=/home/brettg/.local/bin:$PATH
 
 # Adjust the prompt depending on whether we're in 'guix environment'.
+
 if [ -n "$GUIX_ENVIRONMENT" ]
 then
-    PS1='\u@\h ==> \w [env] λ: '
+    if [ -f "$GUIX_ENVIRONMENT/bin/utop" ]
+    then
+	PS1='[\u@\h] [\w] [ocaml] λ '
+	
+    elif [ -f "$GUIX_ENVIRONMENT/bin/ccls" ]
+    then	
+	PS1='[\u@\h] [\w] [cobjc] λ '
+
+    elif [ -f "$GUIX_ENVIRONMENT/bin/coqtop" ]
+    then	
+	PS1='[\u@\h] [\w] [coq] λ '
+
+    elif [ -f "$GUIX_ENVIRONMENT/bin/python3" ]
+    then	
+	PS1='[\u@\h] [\w] [python] λ '
+	 
+    else
+	PS1='[\u@\h] [\w] [env] λ '
+    fi
 else
-    PS1='\u@\h ==> \w λ: '
+    PS1='[\u@\h] [\w] λ '
 fi
 
 alias ls='ls -p --color=auto'

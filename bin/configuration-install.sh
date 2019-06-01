@@ -22,7 +22,7 @@ cd ..
 
 for dotfile in screenrc bash_profile bashrc gitconfig guile \
 			nanorc nix-channels offlineimaprc Xdefaults \
-			Xresources zprofile gdbinit
+			Xresources zprofile gdbinit screenrc
 	       
 do
     if [ -f "$HOME/.${dotfile}" ]; then
@@ -42,6 +42,6 @@ do
 	echo "$HOME/.${configs} | DIRECTORY exists, skipping..."
     else
 	echo "Creating $HOME/.${configs}..."
-	ln -rs ".${configs}" "$HOME" 
+	ln -rs ".${configs}" "$HOME"  # THIS DOESNT WORK
     fi
 done

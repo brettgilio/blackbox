@@ -25,9 +25,6 @@ if [[ -z "$STY" ]]; then
 	#   -m guile
 fi
 
-# XWindow transparency
-[ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
-
 # Aliases
 alias emacs='emacs --no-x-resources'
 

@@ -25,9 +25,6 @@ if [[ -z "$STY" ]]; then
 	#   -m guile
 fi
 
-# Aliases
-alias emacs='emacs --no-x-resources'
-
 # Exports
 export GUILE_LOAD_PATH=/home/brettg/Repos/guix-system:$GUILE_LOAD_PATH
 export PATH=/home/brettg/.local/bin:$PATH
@@ -43,3 +40,4 @@ fi
 alias ls='ls -p --color=auto'
 alias ll='ls -l'
 alias grep='grep --color=auto'
+alias emacs='emacs --no-x-resources'

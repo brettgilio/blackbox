@@ -20,10 +20,13 @@ fi
 source /etc/bashrc
 
 # Start GNU Screen
-if [[ -z "$STY" ]]; then
-    screen -xRR session_name \
-	#   -m guile
+if [ $(tty) == "/dev/pts/0" ];
+   then
+   if [[ -z "$STY" ]]; then
+       screen -xRR session_name
+   fi
 fi
+   
 
 # Exports
 export GUILE_LOAD_PATH=/home/brettg/Repos/guix-system:$GUILE_LOAD_PATH

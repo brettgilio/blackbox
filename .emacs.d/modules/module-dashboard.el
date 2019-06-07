@@ -1,8 +1,23 @@
 (defun module-dashboard//dashboard ()
+
+
+  ;; IMPLEMENT CHANGING BANNER BY META-PKG ENVIRONMENT
+  
+  ;; (defvar guix-env-directory (getenv "GUIX_ENVIRONMENT"))
+
+  ;; (expand-file-name guix-env-directory)
+
+  ;; (if (expand-file-name guix-env-directory)
+  ;;     (expand-file-name "artwork/logo.png" user-emacs-directory)
+  ;;   nil)
+  ;; (if (expand-file-name "bin/coqtop" guix-env-directory)
+  ;;     (expand-file-name "artwork/coq_logo.png" user-emacs-directory)
+  ;;   nil))
+
   
   (use-package dashboard
     :config (dashboard-setup-startup-hook))
-
+  
   ;; REFORMAT ALL OF THE BELOW TO INCORPORATE INTO USE-PACKAGE
   (set-face-attribute 'dashboard-banner-logo-title nil :weight 'bold)
   (setq dashboard-banner-logo-title "Welcome to GNU Emacs!")
@@ -18,7 +33,7 @@
   (setq dashboard-set-init-info t)
   (setq dashboard-items '((recents . 8)
 			  (agenda . 5)))
-
+  
   ;; Recent files
   (recentf-mode 1)
   (setq recentf-max-menu-items 25)

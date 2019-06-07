@@ -20,6 +20,8 @@
   
   ;; REFORMAT ALL OF THE BELOW TO INCORPORATE INTO USE-PACKAGE
   (set-face-attribute 'dashboard-banner-logo-title nil :weight 'bold)
+  (set-face-attribute 'dashboard-footer nil :weight 'semi-light :slant 'italic)
+  
   (setq dashboard-banner-logo-title "Welcome to GNU Emacs!")
   (setq dashboard-init-info
 	(format "[Init: %.2fs] [GC: %dx]"
@@ -27,6 +29,7 @@
 		gcs-done))
   (setq dashboard-startup-banner
 	(expand-file-name "artwork/logo.png" user-emacs-directory))
+  (setq dashboard-footer (emacs-version))
   (setq dashboard-set-heading-icons t)
   (setq dashboard-set-file-icons t)
   (setq dashboard-center-content t)

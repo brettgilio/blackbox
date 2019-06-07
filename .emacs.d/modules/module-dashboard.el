@@ -34,7 +34,7 @@
   (setq dashboard-set-file-icons t)
   (setq dashboard-center-content t)
   (setq dashboard-set-init-info t)
-  (setq dashboard-items '((recents . 8)
+  (setq dashboard-items '((recents . 5)
 			  (agenda . 5)))
   
   ;; Recent files

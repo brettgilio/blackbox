@@ -67,9 +67,6 @@
 (use-package module-cobjc
   :hook (after-init . module-cobjc//load-lsp))
 
-;(use-package module-fsharp
-;  :hook (after-init . module-fsharp//load-fsi))
-
 (use-package module-hy
   :hook (after-init . module-hy//load-hy))
 

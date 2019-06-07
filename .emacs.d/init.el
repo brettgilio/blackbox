@@ -49,6 +49,7 @@
 
 ;; Aliased function modules.
 (require 'module-irc)
+(require 'module-custom)
 ;(require 'module-snippets)
 
 ;; Lazily loaded modules.

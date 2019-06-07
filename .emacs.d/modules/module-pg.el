@@ -6,7 +6,7 @@
 		  "share/emacs/site-lisp/ProofGeneral/generic"
 		  (or (getenv "GUIX_ENVIRONMENT")
 		      (error "GUIX_ENVIRONMENT is not defined."))))
-    :config (setq  coq-compile-before-require t)
+    :config (setq coq-compile-before-require t)
     :mode ("\\.v\\'" . coq-mode))
 
   (use-package company-coq

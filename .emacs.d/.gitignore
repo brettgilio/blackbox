@@ -13,3 +13,4 @@ transient/
 *.el~
 request/
 *.elc
+recentf*

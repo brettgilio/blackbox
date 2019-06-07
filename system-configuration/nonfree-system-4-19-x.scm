@@ -115,7 +115,9 @@
 		  python
                   %base-packages))
  
- (services (cons* (service slim-service-type)
+ (services (cons* (service slim-service-type
+			   (slim-configuration
+			    (default-user ""))) ; Change SLiM Theme
 		  (remove (lambda (service)
 			    (eq? (service-kind service)
 				 gdm-service-type))

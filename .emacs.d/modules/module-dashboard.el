@@ -7,7 +7,7 @@
   (set-face-attribute 'dashboard-banner-logo-title nil :weight 'bold)
   (setq dashboard-banner-logo-title "Welcome to GNU Emacs!")
   (setq dashboard-init-info
-	(format "Ready in %.2f seconds with %d garbage collections."
+	(format "[Init: %.2fs] [GC: %dx]"
 		(float-time (time-subtract after-init-time before-init-time))
 		gcs-done))
   (setq dashboard-startup-banner

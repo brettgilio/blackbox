@@ -77,3 +77,6 @@
 
 (use-package module-rust
   :hook (after-init . module-rust//load-lsp))
+
+(use-package module-racket
+  :hook (after-init . module-racket//load-rkt))

@@ -5,16 +5,19 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
+;; No stale bytecode.
+(setq load-prefer-newer t)
+
+;; Initialize packages
 (package-initialize)
 
-;; Disable the splash-screen.
-(setq inhibit-startup-message t)
-
-;; Establish auto-compiled bytecode and reject stale.
-(setq load-prefer-newer t)
+;; Establish auto-compiled bytecode.
+;; FIX ME: Currently not functioning.
 (require 'auto-compile)
 (auto-compile-on-load-mode)
 (auto-compile-on-save-mode)
+(setq auto-compile-display-buffer nil)
+(setq auto-compile-mode-line-counter t)
 
 ;; Set path to modules, and `add-to-list'.
 (setq modules-dir

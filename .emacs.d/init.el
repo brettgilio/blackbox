@@ -42,6 +42,7 @@
 (require 'module-appearance)
 (require 'module-mail)
 (require 'module-helm)
+(require 'module-dashboard)
 
 ;; Aliased function modules.
 (require 'module-irc)

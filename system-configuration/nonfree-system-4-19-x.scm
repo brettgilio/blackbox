@@ -8,6 +8,7 @@
   #:use-module (gnu packages ncurses)
   #:use-module (gnu packages python)
   #:use-module (gnu packages xorg)
+  #:use-module (non-gnu packages lisp-extend)
   #:use-module (guix packages)
   #:use-module (guix download)
   #:use-module (guix git-download)
@@ -104,7 +105,7 @@
  
  (packages (cons* nss-certs         ;for HTTPS access
                   gvfs              ;for user mounts
-		  stumpwm
+		  stumpwm-system
 		  xauth
 		  xterm
 		  xrdb

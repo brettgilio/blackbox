@@ -41,7 +41,7 @@
  
  (packages (cons* nss-certs         ;for HTTPS access
                   gvfs              ;for user mounts
-		  stumpwm
+		  stumpwm-system
 		  xauth
 		  xterm
 		  xrdb

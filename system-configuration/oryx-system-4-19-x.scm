@@ -1,4 +1,4 @@
-(define-module (system-configuration nonfree-system-4-19-x)
+(define-module (system-configuration oryx-system-4-19-x)
   #:use-module (gnu)
   #:use-module (gnu system nss)
   #:use-module (gnu packages guile)
@@ -21,7 +21,7 @@
 (use-package-modules certs gnome)
 
 (operating-system
- (host-name "guixsd")
+ (host-name "oryx")
  (timezone "America/Chicago")
  (locale "en_US.utf8")
 

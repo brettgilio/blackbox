@@ -66,6 +66,9 @@
  (services (cons* (service slim-service-type
 			   (slim-configuration
 			    (default-user ""))) ; Change SLiM Theme
+		  (service guix-publish-service-type
+			   (guix-publish-configuration
+			    (port 8080)))
 		  (remove (lambda (service)
 			    (eq? (service-kind service)
 				 gdm-service-type))

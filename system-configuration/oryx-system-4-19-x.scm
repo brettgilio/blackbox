@@ -68,7 +68,8 @@
 			    (default-user ""))) ; Change SLiM Theme
 		  (service guix-publish-service-type
 			   (guix-publish-configuration
-			    (port 8080)))
+			    (port 8080)
+			    (host "0.0.0.0")))
 		  (remove (lambda (service)
 			    (eq? (service-kind service)
 				 gdm-service-type))

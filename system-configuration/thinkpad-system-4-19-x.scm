@@ -10,6 +10,7 @@
   #:use-module (gnu packages xorg)
   #:use-module (non-gnu packages lisp-extend)
   #:use-module (non-gnu packages linux-extend)
+  #:use-module (non-guix services xorg-extend)
   #:use-module (guix packages)
   #:use-module (guix download)
   #:use-module (guix git-download)
@@ -74,7 +75,8 @@
  
  (services (cons* (service slim-service-type
 			   (slim-configuration
-			    (default-user ""))) ; Change SLiM Theme
+			    (theme %default-slim-theme-modified)
+			    (theme-name %default-slim-theme-name-modified)))
 		  (remove (lambda (service)
 			    (eq? (service-kind service)
 				 gdm-service-type))

@@ -8,7 +8,7 @@
        (name 'guix)
        (url "https://git.savannah.gnu.org/git/guix.git")
        (commit
-	"562a2a40952b06cb6c64d97539984d0c10007a31")))
+	"0bc010dacded4d89aa39f2d37fe75414b69b680e")))
 
 ;; Manually manage mainline guix commits
 ;; LOG: http://git.savannah.gnu.org/cgit/guix.git/log/

@@ -2,7 +2,7 @@
   #:use-module (guix channels))
 
 (list (channel
-       (name 'guix-channel)
+       (name 'blackbox)
        (url "https://git.sr.ht/~brettgilio/guix-channel"))
       (channel
        (name 'guix)

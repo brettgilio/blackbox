@@ -16,10 +16,25 @@
   #:use-module (guix git-download)
   #:use-module (guix build-system trivial)
   #:use-module ((guix licenses) #:prefix license:)
-  #:use-module (srfi srfi-1))
+  #:use-module (srfi srfi-1)
+  #:use-module (srfi srfi-26))
 
 (use-service-modules desktop xorg)
 (use-package-modules certs gnome)
+
+(define %default-substitute-urls-modified
+  ;; Default list of substituters.  This is *not* the list baked in
+  ;; 'guix-daemon', but it is used by 'guix-service-type' and and a couple of
+  ;; clients ('guix build --log-file' uses it.)
+       '("https://ci.guix.gnu.org"
+	 "http://192.168.1.2:8080"))
+
+(define %desktop-services-modified
+  (modify-services %desktop-services
+		   (guix-service-type config =>
+				      (guix-configuration
+				       (inherit config)
+				       (substitute-urls %default-substitute-urls-modified)))))
 
 (operating-system
  (host-name "thinkpad")
@@ -80,7 +95,7 @@
 		  (remove (lambda (service)
 			    (eq? (service-kind service)
 				 gdm-service-type))
-			  %desktop-services)))
+			  %desktop-services-modified)))
  
  ;; Allow resolution of '.local' host names with mDNS.
  (name-service-switch %mdns-host-lookup-nss))

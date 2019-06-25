@@ -7,7 +7,13 @@ with pkgs;
 let
   all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};
 
-  hs = [ cabal-install ghc all-hies.latest stack ];
+  hs = [ cabal-install
+         ghc
+         gmp
+         all-hies.latest
+         stack
+         haskellPackages.alex
+         haskellPackages.happy ];
 in
   mkShell {
     name = "${compiler}-sh";

@@ -14,6 +14,7 @@
   #:use-module (guix download)
   #:use-module (guix git-download)
   #:use-module (guix build-system trivial)
+  #:use-module (non-guix services xorg-extend)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (srfi srfi-1))
 
@@ -65,7 +66,8 @@
  
  (services (cons* (service slim-service-type
 			   (slim-configuration
-			    (default-user ""))) ; Change SLiM Theme
+			    (theme %default-slim-theme-modified)
+			    (theme-name %default-slim-theme-name-modified)))
 		  (service guix-publish-service-type
 			   (guix-publish-configuration
 			    (port 8080)

@@ -3,7 +3,7 @@
 
 (list (channel
        (name 'blackbox)
-       (url "https://git.sr.ht/~brettgilio/guix-channel"))
+       (url "https://git.sr.ht/~brettgilio/blackbox-channel"))
       (channel
        (name 'guix)
        (url "https://git.savannah.gnu.org/git/guix.git")

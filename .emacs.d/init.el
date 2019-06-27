@@ -83,3 +83,6 @@
 
 (use-package module-racket
   :hook (after-init . module-racket//load-rkt))
+
+(use-package module-tex
+  :hook (after-init . module-tex//auctex))

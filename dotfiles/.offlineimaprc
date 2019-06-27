@@ -1,7 +1,7 @@
 [general]
 accounts = Posteo
 maxsyncaccounts = 1
-pythonfile = /home/brettg/Repos/guix-system/bin/offlineimap.py
+pythonfile = /home/brettg/Repos/blackbox/bin/offlineimap.py
 
 [Account Posteo]
 localrepository = LocalPosteo

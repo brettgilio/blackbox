@@ -29,6 +29,7 @@
    "screen"
    "scrot"
    "sshfs"
+   "tree"
    "unzip"
    "xautolock"
    "xosd"))

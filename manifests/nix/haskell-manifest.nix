@@ -10,7 +10,6 @@ let
   hs = [ cabal-install
          ghc
          gmp
-         all-hies.latest
          stack
          haskellPackages.alex
          haskellPackages.happy ];
@@ -18,7 +17,9 @@ in
   mkShell {
     name = "${compiler}-sh";
 
-    buildInputs = [ hs ];
+    buildInputs = [ hs
+                    (all-hies.selection { selector = p: { inherit (p) ghc864 ghc863 ghc843; }; })
+                  ];
     
     # shellHook = ''
     #  eval "$(egrep ^export "$(type -p ghc)")"

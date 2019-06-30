@@ -86,3 +86,6 @@
 
 (use-package module-tex
   :hook (after-init . module-tex//auctex))
+
+(use-package module-lilypond
+  :hook (after-init . module-lilypond//init))

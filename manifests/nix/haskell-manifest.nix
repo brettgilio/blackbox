@@ -18,7 +18,16 @@ in
     name = "${compiler}-sh";
 
     buildInputs = [ hs
-                    (all-hies.selection { selector = p: { inherit (p) ghc864 ghc863 ghc843; }; })
+                    (all-hies.selection { selector = p: { inherit (p)
+                      ghc865
+                      ghc864
+                      ghc863
+                      ghc862
+                      ghc861
+                      ghc844
+                      ghc843
+                      ghc842
+                      ghc822; }; })
                   ];
     
     # shellHook = ''

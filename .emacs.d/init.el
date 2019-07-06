@@ -47,6 +47,7 @@
 (require 'module-helm)
 (require 'module-dashboard)
 (require 'module-org)
+(require 'module-optimizations)
 
 ;; Aliased function modules.
 (require 'module-irc)

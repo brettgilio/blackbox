@@ -1,4 +1,4 @@
-(define-module (system-configuration thinkpad-system-4-19-x)
+(define-module (system-configuration t430-slim-stump-419x)
   #:use-module (gnu)
   #:use-module (gnu system nss)
   #:use-module (gnu packages guile)
@@ -37,7 +37,7 @@
 				       (substitute-urls %default-substitute-urls-modified)))))
 
 (operating-system
- (host-name "thinkpad")
+ (host-name "t430")
  (timezone "America/Chicago")
  (locale "en_US.utf8")
 

@@ -1,7 +1,7 @@
 (defun module-appearance//default-theme (&optional _frame)
   (set-face-attribute 'default nil
 		      :family "Source Code Pro"
-		      :height 160
+		      :height 140
 		      :weight 'regular)
   
   (display-time-mode)

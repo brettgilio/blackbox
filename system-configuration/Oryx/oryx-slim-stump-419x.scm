@@ -1,4 +1,4 @@
-(define-module (system-configuration oryx-system-4-19-x)
+(define-module (system-configuration oryx-slim-stump-419x)
   #:use-module (gnu)
   #:use-module (gnu system nss)
   #:use-module (gnu packages guile)

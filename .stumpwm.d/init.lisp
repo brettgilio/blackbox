@@ -12,6 +12,7 @@
 
 (run-commands "exec feh --bg-scale ~/Pictures/gnulinux.png")
 (run-commands "exec xterm")
+(run-commands "exec nix-serve -p 8082")
 
 (load-user-module "keybindings")
 (load-user-module "theme")

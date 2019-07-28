@@ -18,6 +18,7 @@
    "guile-readline"
    "guile-xosd"
    "htop"
+   "icecat"
    "mu"
    "offlineimap"
    "openssh"

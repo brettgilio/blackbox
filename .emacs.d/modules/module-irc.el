@@ -29,6 +29,7 @@
 (defalias 'exec-irc
   (lambda ()
     (interactive)
+    (make-frame)
     (module-irc//load-erc)))
 
 (provide 'module-irc)

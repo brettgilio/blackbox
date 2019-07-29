@@ -14,7 +14,9 @@
 	   (lambda ()
 	     (require 'lsp-haskell)
 	     (lsp)))
-    :config (setq lsp-haskell-process-path-hie "hie-wrapper")
+    :config
+    (setq lsp-haskell-process-path-hie "hie-wrapper")
+    (setq lsp-prefer-flymake nil)
     :defer t))
 
 (provide 'module-haskell)

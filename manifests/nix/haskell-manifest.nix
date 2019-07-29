@@ -12,7 +12,9 @@ let
          gmp
          stack
          haskellPackages.alex
-         haskellPackages.happy ];
+         haskellPackages.happy
+         haskellPackages.hoogle
+         haskellPackages.cabal-helper ];
   
 in
 mkShell {

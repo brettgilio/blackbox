@@ -9,6 +9,9 @@
 
   (require 'doom-themes)
   (load-theme 'doom-city-lights t)
+
+  (require 'solaire-mode)
+  (solaire-global-mode +1)
   
   (defun module-appearance//default-theme//doom-modeline-daemon (_frame)
     "`doom-modeline' strangely does not handle well under a daemonized Emacs."

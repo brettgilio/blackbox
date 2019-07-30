@@ -22,13 +22,14 @@
   (set-face-attribute 'dashboard-banner-logo-title nil :weight 'bold)
   (set-face-attribute 'dashboard-footer nil :weight 'semi-light :slant 'italic)
   
-  (setq dashboard-banner-logo-title "Welcome to GNU Emacs!")
+  (setq dashboard-banner-logo-title
+	(concat "Version " blackbox-version))
   (setq dashboard-init-info
 	(format "[Init: %.2fs] [GC: %dx]"
 		(float-time (time-subtract after-init-time before-init-time))
 		gcs-done))
   (setq dashboard-startup-banner
-	(expand-file-name "artwork/logo.png" user-emacs-directory))
+	(expand-file-name "artwork/bblogo.png" user-emacs-directory))
   (setq dashboard-footer (emacs-version))
   (setq dashboard-set-heading-icons t)
   (setq dashboard-set-file-icons t)

@@ -1,0 +1,49 @@
+Blackbox
+========
+
+[Scheme] [Emacs Lisp] [Common Lisp] [C] [Haskell] [Nix]
+
+Blackbox is a distribution configuration based on the Guix System Configuration
+Language, and the Guix/Nix package managers. The goal of this project is to
+maintain compatability with the system distribution of GNU Guix, allowing you to
+install Blackbox as a superficial layer on-top of the standard Guix
+upstream. Blackbox is designed to provide you with an OOTB working hackable
+system designed for software engineers, mathematicians, and ethical hackers of
+many varieties.
+
+Features:
+-- GNU Emacs Configuration supporting
+
+   Languages:
+   -- [✓] C/C++/ObjC
+   -- [-] Common Lisp (W.I.P)
+   -- [✓] Coq/Gallina
+   -- [-] Emacs Lisp (W.I.P)
+   -- [-] F* (W.I.P)
+   -- [✓] Haskell
+   -- [-] Hy (W.I.P)
+   -- [✓] OCaml
+   -- [✓] Python
+   -- [✓] Racket
+   -- [✓] Rust
+   -- [✓] Scheme
+   -- [-] TeX (W.I.P)
+
+   Activities:
+   -- [✓] ePub
+   -- [✓] Mu4E + OfflineIMAP
+   -- [✓] PDF
+   -- [-] Org
+
+1. Contributing
+===============
+
+The primary Blackbox GNU/Linux repository is currently hosted at
+[https://git.sr.ht/~brettgilio/blackbox], but is also mirrored at
+[https://github.com/brettgilio/blackbox]. The GitHub mirror is a read-only
+repository for people to view, no contributions will be accepted from that
+medium. Like GNU Guix, this project uses a Git-by-email patch method for
+submitting and tracking changes to the source tree. While appreciated,
+contributions in the form of pull requests are not going to be merged.
+
+More information on how to contribute will be added at a later date.

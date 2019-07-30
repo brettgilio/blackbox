@@ -1,5 +1,8 @@
 ;;; init.el --- user initialization file -*- lexical-binding: t -*-
 
+;; Blackbox EMACS Version
+(defvar blackbox-version "0.1.3")
+
 ;; Disable all mouse-interactive interfaces early.
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))

@@ -1,39 +1,44 @@
-Blackbox
+Blackbox GNU/Linux-libre
+========================
+
+Blackbox GNU/Linux-libre is a distribution of GNU/Linux derived from
+the Guix & Nix configuration languages and package managers. This
+project is an on-going fork of GNU Guix that may be either installed
+using a separate ISO, or on-top of your current Guix System
+configuration. Blackbox is designed for software engineers,
+mathematicians, and ethical hackers to provide an OOTB environment for
+various projects. Unlike Guix, Blackbox is an opinionated distribution
+that strives to provide as much up-front to the hacker, with initially
+little to configure unless you ultimately desire to make changes.
+
+Features
 ========
+Kernels:
+  -- Linux-libre 4.19.63 LTS
 
-[Scheme] [Emacs Lisp] [Common Lisp] [C] [Haskell] [Nix]
-
-Blackbox is a distribution configuration based on the Guix System Configuration
-Language, and the Guix/Nix package managers. The goal of this project is to
-maintain compatability with the system distribution of GNU Guix, allowing you to
-install Blackbox as a superficial layer on-top of the standard Guix
-upstream. Blackbox is designed to provide you with an OOTB working hackable
-system designed for software engineers, mathematicians, and ethical hackers of
-many varieties.
-
-Features:
--- GNU Emacs Configuration supporting
-
-   Languages:
-   -- [✓] C/C++/ObjC
-   -- [-] Common Lisp (W.I.P)
-   -- [✓] Coq/Gallina
-   -- [-] Emacs Lisp (W.I.P)
-   -- [-] F* (W.I.P)
-   -- [✓] Haskell
-   -- [-] Hy (W.I.P)
-   -- [✓] OCaml
-   -- [✓] Python
-   -- [✓] Racket
-   -- [✓] Rust
-   -- [✓] Scheme
-   -- [-] TeX (W.I.P)
-
-   Activities:
-   -- [✓] ePub
-   -- [✓] Mu4E + OfflineIMAP
-   -- [✓] PDF
-   -- [-] Org
+Window Managers:
+  -- StumpWM (Vanilla & Blackbox)
+  
+Editor:
+  -- GNU Emacs (Vanilla & Blackbox)
+     -- [✓] C/C++/ObjC
+     -- [-] Common Lisp (W.I.P)
+     -- [✓] Coq/Gallina
+     -- [-] Emacs Lisp (W.I.P)
+     -- [-] F* (W.I.P)
+     -- [✓] Haskell
+     -- [-] Hy (W.I.P)
+     -- [✓] OCaml
+     -- [✓] Python
+     -- [✓] Racket
+     -- [✓] Rust
+     -- [✓] Scheme
+     -- [-] TeX (W.I.P)
+     
+     -- [✓] ePub
+     -- [✓] Mu4E + OfflineIMAP
+     -- [✓] PDF
+     -- [-] Org (W.I.P)
 
 1. Contributing
 ===============

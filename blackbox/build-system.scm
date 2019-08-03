@@ -44,27 +44,27 @@
 
 (define-record-type* <build-system> build-system make-build-system
   build-system?
-  (name        build-system-name) ; symbol
+  (name build-system-name) ; symbol
   (description build-system-description) ; short description
-  (lower       build-system-lower)) ; args ... -> bags
+  (lower build-system-lower)) ; args ... -> bags
 
 ;; "Bags" are low-level representations of "packages".  The system and target
 ;; of a bag is fixed when it's created.  This is because build systems may
 ;; choose inputs as a function of the system and target.
 (define-record-type* <bag> bag %make-bag
   bag?
-  (name          bag-name) ;string
+  (name bag-name) ;string
   
-  (system        bag-system) ;string
-  (target        bag-target ;string | #f
-                 (default #f))
+  (system bag-system) ;string
+  (target bag-target ;string | #f
+	  (default #f))
   
   ;; Here we use build/host/target in the sense of the GNU tool chain (info
   ;; "(autoconf) Specifying Target Triplets").
-  (build-inputs  bag-build-inputs ;list of packages
-                 (default '()))
-  (host-inputs   bag-host-inputs ;list of packages
-                 (default '()))
+  (build-inputs bag-build-inputs ;list of packages
+		(default '()))
+  (host-inputs bag-host-inputs ;list of packages
+	       (default '()))
   
   ;; "Target inputs" are packages that are built natively, but that are used
   ;; by target programs in a cross-compilation environment.  Thus, they act
@@ -75,11 +75,11 @@
   (target-inputs bag-target-inputs
                  (default '()))
   
-  (outputs       bag-outputs ;list of strings
-                 (default '("out")))
-  (arguments     bag-arguments ;list
-                 (default '()))
-  (build         bag-build)) ;bag -> derivation
+  (outputs bag-outputs ;list of strings
+	   (default '("out")))
+  (arguments bag-arguments ;list
+	     (default '()))
+  (build bag-build)) ;bag -> derivation
 
 (define* (make-bag build-system name
                    #:key source (inputs '()) (native-inputs '())
